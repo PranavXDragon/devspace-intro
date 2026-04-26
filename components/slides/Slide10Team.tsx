@@ -4,52 +4,52 @@ import { useState } from "react";
 
 const team = [
   {
-    role: "Lead",
-    domain: "AI / Systems",
+    role: "President",
+    domain: "Leadership",
     color: "var(--green)",
-    tags: ["Symbi-OS Architect", "AI Supply Chain", "Top 2% PyTorch OpenEnv"],
-    bio: "Architect of Symbi-OS, an AI Supply Chain Engine. Placed Top 2% globally in the Meta PyTorch OpenEnv Hackathon.",
-    handle: "lead.osc",
+    tags: ["Vision & Direction", "Decisions & Meetings", "Sponsors & Stakeholders"],
+    bio: "Abhinav Kumar Jha sets the vision and overall direction of the club and represents it to faculty, management, and external competitions. He leads major decisions, meetings, events, and partnerships, including coordination with sponsors and stakeholders.",
+    handle: "abhinav.jha",
   },
   {
-    role: "Mentorship Head",
-    domain: "Open Source",
+    role: "Vice President",
+    domain: "Operations & Finance",
     color: "var(--blue)",
-    tags: ["Core Maintainer", "Architecture Specialist", "PR Reviewer"],
-    bio: "Core maintainer of major open-source projects. Specializes in software architecture and guiding first-time contributors through real codebases.",
-    handle: "mentor.osc",
+    tags: ["Daily Operations", "Budget & Expenses", "Approvals & Transparency"],
+    bio: "Rushabh Mistry manages day-to-day operations to keep activities smooth and on schedule. He manages the club budget and expenses for NPS and outcomes, handles approvals and fund tracking, and coordinates with sponsors or the college when required.",
+    handle: "rushabh.mistry",
   },
   {
-    role: "Internal Ops",
-    domain: "Systems / Go",
+    role: "Training Head",
+    domain: "Learning & Development",
     color: "#a78bfa",
-    tags: ["Go Developer", "Systems Engineer", "Campus Tool Maintainer"],
-    bio: "Go-based systems developer maintaining campus-wide tooling. Bridges internal operations with production engineering standards.",
-    handle: "ops.osc",
+    tags: ["Skill Roadmaps", "Weekly Sessions", "Progress Tracking"],
+    bio: "Mehul Agarwal defines skill development plans with clear roadmaps for beginner, intermediate, and advanced members. He plans and runs weekly sessions and peer-learning while tracking member progress and improvement.",
+    handle: "mehul.agarwal",
   },
   {
-    role: "Web3 Lead",
-    domain: "Blockchain",
+    role: "Mentorship Program & Events Head",
+    domain: "Mentorship & Events",
     color: "#9945FF",
-    tags: ["Solana VM", "Smart Contract Auditor", "DeFi Contributor"],
-    bio: "Solana Virtual Machine specialist and certified Smart Contract Auditor. Deep in the on-chain developer ecosystem.",
-    handle: "web3.osc",
+    tags: ["Mentorship Outcomes", "Event Execution", "Logistics & Timelines"],
+    bio: "Prateek Singh plans and monitors the mentorship program end-to-end for measurable outcomes. He plans and executes hackathons, contests, and guest sessions from start to finish while managing logistics and participant experience.",
+    handle: "prateek.singh",
   },
   {
-    role: "Systems / CP Lead",
-    domain: "Algorithms / C++",
+    role: "Repo Maintainer",
+    domain: "Open Source Infrastructure",
     color: "#f59e0b",
-    tags: ["CF Expert 1600+", "C++ / Distributed", "Low-Level Specialist"],
-    bio: "Codeforces Expert rated 1600+. Specializes in C++ and distributed systems, bridging competitive programming with real engineering.",
-    handle: "systems.osc",
+    tags: ["Repo Structure", "Contribution Reviews", "Issues / PRs / Releases"],
+    bio: "Anant Singh manages and maintains the club's open-source repositories with clean structure, documentation, and code quality. He reviews contributions, guides contributors, and ensures issues, pull requests, and releases are handled smoothly.",
+    handle: "anant.singh",
   },
   {
-    role: "App Lead",
-    domain: "Mobile / Hackathons",
+    role: "Tech and Operations Lead",
+    domain: "Tech Ops & Collaborations",
     color: "#ef4444",
-    tags: ["50k+ Downloads", "MLH Top 10", "Full-Stack Mobile"],
-    bio: "50k+ app downloads across stores. MLH Hackathon Top 10 finisher. Leads the mobile and application track with production-grade standards.",
-    handle: "app.osc",
+    tags: ["Content & Operations", "External Collaborations", "Club Coordination"],
+    bio: "Kunal Kumar handles tech content and operations, and drives collaborations with outside clubs and organizations to support the club's execution and growth.",
+    handle: "kunal.kumar",
   },
 ];
 
@@ -78,7 +78,7 @@ export default function Slide10Team() {
             letterSpacing: "-0.02em",
           }}
         >
-          Led by engineers in the trenches.
+          The Team Behind OSC.
         </h2>
         <p
           style={{
@@ -88,7 +88,7 @@ export default function Slide10Team() {
             fontFamily: "JetBrains Mono",
           }}
         >
-          Not textbook readers. Actual builders with global receipts.
+          Operators, mentors, and maintainers building outcomes.
         </p>
       </motion.div>
 

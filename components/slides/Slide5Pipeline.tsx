@@ -26,7 +26,7 @@ function getPos(id: string, w: number, h: number) {
 
 export default function Slide5Pipeline() {
   const W = 900;
-  const H = 340;
+  const H = 380;
 
   return (
     <div
@@ -129,7 +129,7 @@ export default function Slide5Pipeline() {
           {nodes.map((node, i) => {
             const pos = getPos(node.id, W, H);
             const isMain = node.id === "scan" || node.id === "outcome";
-            const r = isMain ? 36 : 30;
+            const r = isMain ? 44 : 38;
             return (
               <motion.g
                 key={node.id}
@@ -164,12 +164,12 @@ export default function Slide5Pipeline() {
                   y={pos.y - 4}
                   textAnchor="middle"
                   fill="white"
-                  fontSize="11"
+                  fontSize="12"
                   fontWeight="600"
                   fontFamily="JetBrains Mono"
                 >
                   {node.label.split(" ").map((word, wi) => (
-                    <tspan key={wi} x={pos.x} dy={wi === 0 ? 0 : 13}>
+                    <tspan key={wi} x={pos.x} dy={wi === 0 ? -6 : 14}>
                       {word}
                     </tspan>
                   ))}
@@ -177,12 +177,12 @@ export default function Slide5Pipeline() {
                 {/* Sub label */}
                 <text
                   x={pos.x}
-                  y={pos.y + (node.label.split(" ").length > 1 ? 22 : 14)}
+                  y={pos.y + (node.label.split(" ").length > 1 ? 20 : 16)}
                   textAnchor="middle"
                   fill={node.color}
-                  fontSize="9"
+                  fontSize="10"
                   fontFamily="JetBrains Mono"
-                  opacity="0.7"
+                  opacity="0.9"
                 >
                   {node.sub}
                 </text>
@@ -197,7 +197,7 @@ export default function Slide5Pipeline() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2 }}
-        className="flex gap-8 mt-8"
+        className="flex gap-6 mt-6"
       >
         {[
           { label: "Track 01 // Open Sessions", sub: "Biweekly · All campus · Meta-skills", color: "var(--green)" },
@@ -209,7 +209,7 @@ export default function Slide5Pipeline() {
               display: "flex",
               alignItems: "center",
               gap: "12px",
-              padding: "12px 20px",
+              padding: "10px 16px",
               background: "var(--glass)",
               border: "1px solid var(--glass-border)",
               borderRadius: "6px",
@@ -226,10 +226,10 @@ export default function Slide5Pipeline() {
               }}
             />
             <div>
-              <div style={{ fontSize: "12px", fontFamily: "JetBrains Mono", color: "#fff", fontWeight: 600 }}>
+              <div style={{ fontSize: "11px", fontFamily: "JetBrains Mono", color: "#fff", fontWeight: 600 }}>
                 {t.label}
               </div>
-              <div style={{ fontSize: "11px", color: "var(--slate)", fontFamily: "JetBrains Mono" }}>
+              <div style={{ fontSize: "10px", color: "var(--slate)", fontFamily: "JetBrains Mono" }}>
                 {t.sub}
               </div>
             </div>

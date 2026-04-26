@@ -37,7 +37,11 @@ const steps = [
   },
 ];
 
-export default function Slide7BuildDays() {
+type Slide7BuildDaysProps = {
+  onNextSlide?: () => void;
+};
+
+export default function Slide7BuildDays({ onNextSlide }: Slide7BuildDaysProps) {
   const [active, setActive] = useState(0);
 
   return (
@@ -239,7 +243,7 @@ export default function Slide7BuildDays() {
             </div>
 
             {/* Step navigation buttons */}
-            <div style={{ display: "flex", gap: "8px", alignSelf: "center", flexShrink: 0 }}>
+            <div style={{ display: "flex", gap: "8px", alignSelf: "center", flexShrink: 0, flexWrap: "wrap", justifyContent: "flex-end", maxWidth: "240px" }}>
               <button
                 onClick={() => setActive(Math.max(0, active - 1))}
                 disabled={active === 0}
@@ -254,7 +258,7 @@ export default function Slide7BuildDays() {
                   cursor: active === 0 ? "not-allowed" : "none",
                 }}
               >
-                ← prev
+                ← prev week
               </button>
               <button
                 onClick={() => setActive(Math.min(steps.length - 1, active + 1))}
@@ -270,7 +274,23 @@ export default function Slide7BuildDays() {
                   cursor: active === steps.length - 1 ? "not-allowed" : "none",
                 }}
               >
-                next →
+                next week →
+              </button>
+              <button
+                onClick={() => onNextSlide?.()}
+                style={{
+                  fontFamily: "JetBrains Mono",
+                  fontSize: "12px",
+                  color: "var(--green)",
+                  background: "rgba(57,211,83,0.08)",
+                  border: "1px solid rgba(57,211,83,0.35)",
+                  padding: "8px 16px",
+                  borderRadius: "4px",
+                  cursor: "none",
+                  width: "100%",
+                }}
+              >
+                next page →
               </button>
             </div>
           </div>

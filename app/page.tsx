@@ -54,6 +54,10 @@ export default function HomePage() {
     setTimeout(() => setIsAnimating(false), 700);
   }, [isAnimating]);
 
+  const goNext = useCallback(() => {
+    goTo(current + 1);
+  }, [current, goTo]);
+
   useEffect(() => {
     if (!trackRef.current) return;
     trackRef.current.style.transform = `translateX(${-current * 100}vw)`;
@@ -104,7 +108,7 @@ export default function HomePage() {
       <div ref={containerRef} style={{ width: "100vw", height: "100vh", overflow: "hidden", position: "relative" }}>
         <div ref={trackRef} style={{ display: "flex", width: `${SLIDES.length * 100}vw`, height: "100vh" }}>
           {SLIDES.map(({ id, component: SlideComponent }) => (
-            <SlideComponent key={id} />
+            id === 7 ? <SlideComponent key={id} onNextSlide={goNext} /> : <SlideComponent key={id} />
           ))}
         </div>
 

@@ -42,7 +42,7 @@ const bentoItems = [
 export default function Slide6OpenSessions() {
   return (
     <div
-      className="slide noise flex flex-col items-center justify-center relative px-10 py-8"
+      className="slide noise flex flex-col items-center justify-start relative px-10 pt-14 pb-6"
       style={{ background: "var(--void)" }}
     >
       <div className="absolute top-6 left-8 section-num">OSC // 06</div>
@@ -54,7 +54,7 @@ export default function Slide6OpenSessions() {
         transition={{ duration: 0.5 }}
         style={{
           position: "absolute",
-          top: "20px",
+          top: "52px",
           right: "32px",
           fontFamily: "JetBrains Mono",
           fontSize: "10px",
@@ -73,7 +73,7 @@ export default function Slide6OpenSessions() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="text-center mb-8"
+        className="text-center mb-6 mt-2"
       >
         <div className="bento-tag mb-3">PHASE 01 // BIWEEKLY SESSIONS</div>
         <h2
@@ -94,7 +94,7 @@ export default function Slide6OpenSessions() {
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "12px",
+          gap: "10px",
           width: "100%",
           maxWidth: "900px",
         }}
@@ -108,7 +108,7 @@ export default function Slide6OpenSessions() {
             className="glass-card"
             style={{
               gridColumn: item.size,
-              padding: "24px",
+              padding: "20px",
               borderRadius: "10px",
               position: "relative",
               overflow: "hidden",
@@ -132,7 +132,7 @@ export default function Slide6OpenSessions() {
             </div>
             <h3
               style={{
-                fontSize: "16px",
+                fontSize: "15px",
                 fontWeight: 700,
                 color: "#fff",
                 marginBottom: "10px",
@@ -143,9 +143,9 @@ export default function Slide6OpenSessions() {
             </h3>
             <p
               style={{
-                fontSize: "13px",
+                fontSize: "12px",
                 color: "rgba(255,255,255,0.55)",
-                lineHeight: 1.65,
+                lineHeight: 1.55,
               }}
             >
               {item.body}
@@ -160,9 +160,9 @@ export default function Slide6OpenSessions() {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
         style={{
-          marginTop: "20px",
+          marginTop: "14px",
           display: "flex",
-          gap: "32px",
+          gap: "24px",
           alignItems: "center",
         }}
       >
@@ -175,14 +175,14 @@ export default function Slide6OpenSessions() {
             <div
               style={{
                 fontFamily: "JetBrains Mono",
-                fontSize: "22px",
+                fontSize: "20px",
                 fontWeight: 700,
                 color: "var(--green)",
               }}
             >
               {s.val}
             </div>
-            <div style={{ fontSize: "11px", color: "var(--slate)", marginTop: "2px" }}>
+            <div style={{ fontSize: "10px", color: "var(--slate)", marginTop: "2px" }}>
               {s.label}
             </div>
           </div>
