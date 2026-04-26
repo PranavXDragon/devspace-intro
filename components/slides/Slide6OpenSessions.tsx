@@ -42,7 +42,7 @@ const bentoItems = [
 export default function Slide6OpenSessions() {
   return (
     <div
-      className="slide noise flex flex-col items-center justify-start relative px-10 pt-14 pb-6"
+      className="slide noise flex flex-col items-center justify-start relative px-10 pt-12 pb-8"
       style={{ background: "var(--void)" }}
     >
       <div className="absolute top-6 left-8 section-num">OSC // 06</div>
@@ -54,7 +54,7 @@ export default function Slide6OpenSessions() {
         transition={{ duration: 0.5 }}
         style={{
           position: "absolute",
-          top: "52px",
+          top: "22px",
           right: "32px",
           fontFamily: "JetBrains Mono",
           fontSize: "10px",
@@ -73,7 +73,8 @@ export default function Slide6OpenSessions() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="text-center mb-6 mt-2"
+        className="text-center mb-6 mt-3"
+        style={{ maxWidth: "860px" }}
       >
         <div className="bento-tag mb-3">PHASE 01 // BIWEEKLY SESSIONS</div>
         <h2
@@ -87,83 +88,123 @@ export default function Slide6OpenSessions() {
           <br />
           <span className="text-glow-green">How to Learn</span>
         </h2>
+        <p
+          style={{
+            marginTop: "10px",
+            fontSize: "13px",
+            color: "var(--slate)",
+            fontFamily: "JetBrains Mono",
+            lineHeight: 1.6,
+          }}
+        >
+          We train core engineering thinking in structured modules, not scattered framework tutorials.
+        </p>
       </motion.div>
 
-      {/* Bento Grid */}
+      {/* Content split */}
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "10px",
+          gridTemplateColumns: "1.2fr 1fr",
+          gap: "14px",
           width: "100%",
-          maxWidth: "900px",
+          maxWidth: "980px",
+          alignItems: "stretch",
         }}
       >
-        {bentoItems.map((item, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: i * 0.1 }}
-            className="glass-card"
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="glass-card"
+          style={{
+            padding: "20px",
+            borderRadius: "10px",
+            position: "relative",
+            overflow: "hidden",
+          }}
+        >
+          <div className="bento-tag mb-3" style={{ color: "var(--green)", borderColor: "rgba(57,211,83,0.25)", background: "rgba(57,211,83,0.1)" }}>
+            {bentoItems[0].tag}
+          </div>
+          <h3
             style={{
-              gridColumn: item.size,
-              padding: "20px",
-              borderRadius: "10px",
-              position: "relative",
-              overflow: "hidden",
+              fontSize: "20px",
+              fontWeight: 700,
+              color: "#fff",
+              marginBottom: "12px",
+              letterSpacing: "-0.01em",
             }}
           >
-            {/* Background accent */}
-            <div
-              style={{
-                position: "absolute",
-                top: 0,
-                right: 0,
-                width: "80px",
-                height: "80px",
-                background: `radial-gradient(circle, ${item.accent}15 0%, transparent 70%)`,
-                pointerEvents: "none",
-              }}
-            />
+            {bentoItems[0].title}
+          </h3>
+          <p
+            style={{
+              fontSize: "13px",
+              color: "rgba(255,255,255,0.6)",
+              lineHeight: 1.65,
+              marginBottom: "16px",
+            }}
+          >
+            {bentoItems[0].body}
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
+            {bentoItems.slice(1, 3).map((item, i) => (
+              <div
+                key={i}
+                style={{
+                  background: "rgba(255,255,255,0.02)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  borderRadius: "8px",
+                  padding: "12px",
+                }}
+              >
+                <div style={{ fontFamily: "JetBrains Mono", fontSize: "10px", color: item.accent, marginBottom: "6px", letterSpacing: "0.08em" }}>{item.tag}</div>
+                <div style={{ fontSize: "14px", fontWeight: 700, color: "#fff", marginBottom: "6px" }}>{item.title}</div>
+                <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.56)", lineHeight: 1.5 }}>{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
 
-            <div className="bento-tag mb-3" style={{ color: item.accent, borderColor: `${item.accent}25`, background: `${item.accent}10` }}>
-              {item.tag}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          style={{ display: "grid", gridTemplateRows: "1fr 1fr", gap: "12px" }}
+        >
+          {bentoItems.slice(3).map((item, i) => (
+            <div
+              key={i}
+              className="glass-card"
+              style={{
+                padding: "18px",
+                borderRadius: "10px",
+                borderColor: `${item.accent}30`,
+              }}
+            >
+              <div className="bento-tag mb-2" style={{ color: item.accent, borderColor: `${item.accent}35`, background: `${item.accent}10` }}>
+                {item.tag}
+              </div>
+              <h3 style={{ fontSize: "16px", color: "#fff", fontWeight: 700, marginBottom: "8px" }}>{item.title}</h3>
+              <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.56)", lineHeight: 1.55 }}>{item.body}</p>
             </div>
-            <h3
-              style={{
-                fontSize: "15px",
-                fontWeight: 700,
-                color: "#fff",
-                marginBottom: "10px",
-                letterSpacing: "-0.01em",
-              }}
-            >
-              {item.title}
-            </h3>
-            <p
-              style={{
-                fontSize: "12px",
-                color: "rgba(255,255,255,0.55)",
-                lineHeight: 1.55,
-              }}
-            >
-              {item.body}
-            </p>
-          </motion.div>
-        ))}
+          ))}
+        </motion.div>
       </div>
 
-      {/* Bottom stat */}
+      {/* Bottom stats as separate cards */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
         style={{
           marginTop: "14px",
-          display: "flex",
-          gap: "24px",
-          alignItems: "center",
+          display: "grid",
+          gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+          gap: "10px",
+          width: "100%",
+          maxWidth: "980px",
         }}
       >
         {[
@@ -171,7 +212,16 @@ export default function Slide6OpenSessions() {
           { val: "Open", label: "to all campus" },
           { val: "3", label: "core meta-skills" },
         ].map((s, i) => (
-          <div key={i} style={{ textAlign: "center" }}>
+          <div
+            key={i}
+            style={{
+              textAlign: "center",
+              background: "rgba(255,255,255,0.02)",
+              border: "1px solid rgba(255,255,255,0.08)",
+              borderRadius: "8px",
+              padding: "10px 8px",
+            }}
+          >
             <div
               style={{
                 fontFamily: "JetBrains Mono",

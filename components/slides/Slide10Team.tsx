@@ -5,51 +5,45 @@ import { useState } from "react";
 const team = [
   {
     role: "President",
-    domain: "Leadership",
+    name: "Abhinav Jha",
     color: "var(--green)",
     tags: ["Vision & Direction", "Decisions & Meetings", "Sponsors & Stakeholders"],
-    bio: "Abhinav Kumar Jha sets the vision and overall direction of the club and represents it to faculty, management, and external competitions. He leads major decisions, meetings, events, and partnerships, including coordination with sponsors and stakeholders.",
-    handle: "abhinav.jha",
+    bio: "Abhinav sets the vision and overall direction of the club and represents it to faculty, management, and external competitions. He leads major decisions, meetings, events, and partnerships, including coordination with sponsors and stakeholders.",
   },
   {
     role: "Vice President",
-    domain: "Operations & Finance",
+    name: "Rushabh Mistry",
     color: "var(--blue)",
     tags: ["Daily Operations", "Budget & Expenses", "Approvals & Transparency"],
-    bio: "Rushabh Mistry manages day-to-day operations to keep activities smooth and on schedule. He manages the club budget and expenses for NPS and outcomes, handles approvals and fund tracking, and coordinates with sponsors or the college when required.",
-    handle: "rushabh.mistry",
+    bio: "Rushabh manages day-to-day operations to keep activities smooth and on schedule. He manages the club budget and expenses for NPS and outcomes, handles approvals and fund tracking, and coordinates with sponsors or the college when required.",
   },
   {
     role: "Training Head",
-    domain: "Learning & Development",
+    name: "Mehul Agarwal",
     color: "#a78bfa",
     tags: ["Skill Roadmaps", "Weekly Sessions", "Progress Tracking"],
-    bio: "Mehul Agarwal defines skill development plans with clear roadmaps for beginner, intermediate, and advanced members. He plans and runs weekly sessions and peer-learning while tracking member progress and improvement.",
-    handle: "mehul.agarwal",
+    bio: "Mehul defines skill development plans with clear roadmaps for beginner, intermediate, and advanced members. He plans and runs weekly sessions and peer-learning while tracking member progress and improvement.",
   },
   {
     role: "Mentorship Program & Events Head",
-    domain: "Mentorship & Events",
+    name: "Prateek Singh",
     color: "#9945FF",
     tags: ["Mentorship Outcomes", "Event Execution", "Logistics & Timelines"],
-    bio: "Prateek Singh plans and monitors the mentorship program end-to-end for measurable outcomes. He plans and executes hackathons, contests, and guest sessions from start to finish while managing logistics and participant experience.",
-    handle: "prateek.singh",
+    bio: "Prateek plans and monitors the mentorship program end-to-end for measurable outcomes. He plans and executes hackathons, contests, and guest sessions from start to finish while managing logistics and participant experience.",
   },
   {
     role: "Repo Maintainer",
-    domain: "Open Source Infrastructure",
+    name: "Anant Singh",
     color: "#f59e0b",
     tags: ["Repo Structure", "Contribution Reviews", "Issues / PRs / Releases"],
-    bio: "Anant Singh manages and maintains the club's open-source repositories with clean structure, documentation, and code quality. He reviews contributions, guides contributors, and ensures issues, pull requests, and releases are handled smoothly.",
-    handle: "anant.singh",
+    bio: "Anant manages and maintains the club's open-source repositories with clean structure, documentation, and code quality. He reviews contributions, guides contributors, and ensures issues, pull requests, and releases are handled smoothly.",
   },
   {
     role: "Tech and Operations Lead",
-    domain: "Tech Ops & Collaborations",
+    name: "Kunal Kumar",
     color: "#ef4444",
     tags: ["Content & Operations", "External Collaborations", "Club Coordination"],
-    bio: "Kunal Kumar handles tech content and operations, and drives collaborations with outside clubs and organizations to support the club's execution and growth.",
-    handle: "kunal.kumar",
+    bio: "Kunal handles tech content and operations, and drives collaborations with outside clubs and organizations to support the club's execution and growth.",
   },
 ];
 
@@ -70,7 +64,7 @@ export default function Slide10Team() {
         transition={{ duration: 0.6 }}
         className="text-center mb-10"
       >
-        <div className="bento-tag mb-3">THE ENGINEERING CORE</div>
+        <div className="bento-tag mb-3">THE CORE TEAM</div>
         <h2
           style={{
             fontSize: "clamp(26px, 3.5vw, 48px)",
@@ -88,7 +82,7 @@ export default function Slide10Team() {
             fontFamily: "JetBrains Mono",
           }}
         >
-          Operators, mentors, and maintainers building outcomes.
+          Leadership, mentorship, operations, and open-source execution.
         </p>
       </motion.div>
 
@@ -96,10 +90,10 @@ export default function Slide10Team() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(6, 1fr)",
-          gap: "12px",
+          gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+          gap: "14px",
           width: "100%",
-          maxWidth: "1100px",
+          maxWidth: "1080px",
         }}
       >
         {team.map((member, i) => (
@@ -110,10 +104,11 @@ export default function Slide10Team() {
             transition={{ duration: 0.5, delay: i * 0.08 }}
             className="profile-card"
             style={{
-              padding: "20px 16px",
+              padding: "20px 18px",
               cursor: "none",
               borderColor:
                 hovered === i ? `${member.color}30` : "var(--glass-border)",
+              minHeight: "290px",
             }}
             onMouseEnter={() => setHovered(i)}
             onMouseLeave={() => setHovered(null)}
@@ -121,8 +116,8 @@ export default function Slide10Team() {
             {/* Avatar placeholder with initials */}
             <div
               style={{
-                width: "48px",
-                height: "48px",
+                width: "54px",
+                height: "54px",
                 borderRadius: "12px",
                 background: `${member.color}15`,
                 border: `1px solid ${member.color}30`,
@@ -145,55 +140,60 @@ export default function Slide10Team() {
               <span
                 style={{
                   fontFamily: "JetBrains Mono",
-                  fontSize: "14px",
+                  fontSize: "16px",
                   fontWeight: 700,
                   color: member.color,
                   zIndex: 1,
                 }}
               >
-                {member.role.charAt(0)}
+                {member.name
+                  .split(" ")
+                  .slice(0, 2)
+                  .map((part) => part.charAt(0))
+                  .join("")}
               </span>
             </div>
 
-            {/* Role */}
+            {/* Role + Name */}
             <div
               style={{
                 fontFamily: "JetBrains Mono",
-                fontSize: "9px",
+                fontSize: "10px",
                 color: member.color,
-                letterSpacing: "0.15em",
+                letterSpacing: "0.12em",
                 textTransform: "uppercase",
-                marginBottom: "4px",
-              }}
-            >
-              {member.domain}
-            </div>
-            <div
-              style={{
-                fontSize: "13px",
-                fontWeight: 700,
-                color: "#fff",
-                marginBottom: "12px",
-                lineHeight: 1.3,
+                marginBottom: "6px",
               }}
             >
               {member.role}
             </div>
+            <div
+              style={{
+                fontSize: "clamp(20px, 1.6vw, 24px)",
+                fontWeight: 700,
+                color: "#fff",
+                marginBottom: "14px",
+                lineHeight: 1.2,
+                letterSpacing: "-0.01em",
+              }}
+            >
+              {member.name}
+            </div>
 
             {/* Tags */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "4px", marginBottom: "14px" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "5px", marginBottom: "12px" }}>
               {member.tags.map((tag, j) => (
                 <div
                   key={j}
                   style={{
                     fontFamily: "JetBrains Mono",
-                    fontSize: "9px",
-                    color: "rgba(255,255,255,0.45)",
+                    fontSize: "10px",
+                    color: "rgba(255,255,255,0.62)",
                     background: "rgba(255,255,255,0.03)",
                     border: "1px solid rgba(255,255,255,0.06)",
-                    padding: "3px 6px",
+                    padding: "4px 8px",
                     borderRadius: "3px",
-                    letterSpacing: "0.05em",
+                    letterSpacing: "0.04em",
                   }}
                 >
                   {tag}
@@ -209,27 +209,15 @@ export default function Slide10Team() {
             >
               <p
                 style={{
-                  fontSize: "11px",
-                  color: "rgba(255,255,255,0.5)",
-                  lineHeight: 1.6,
-                  marginBottom: "10px",
+                  fontSize: "12px",
+                  color: "rgba(255,255,255,0.56)",
+                  lineHeight: 1.55,
+                  marginBottom: "8px",
                 }}
               >
                 {member.bio}
               </p>
             </motion.div>
-
-            {/* Handle */}
-            <div
-              style={{
-                fontFamily: "JetBrains Mono",
-                fontSize: "10px",
-                color: "rgba(255,255,255,0.2)",
-                marginTop: "auto",
-              }}
-            >
-              @{member.handle}
-            </div>
 
             {/* Bottom accent line */}
             <div
@@ -260,7 +248,7 @@ export default function Slide10Team() {
           textAlign: "center",
         }}
       >
-        <span style={{ color: "var(--green)" }}>hover</span> a card to read their full stack
+        <span style={{ color: "var(--green)" }}>hover</span> a card to read responsibilities
       </motion.p>
     </div>
   );
