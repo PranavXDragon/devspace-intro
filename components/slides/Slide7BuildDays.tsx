@@ -206,8 +206,8 @@ export default function Slide7BuildDays({ onNextSlide }: Slide7BuildDaysProps) {
             </span>
           </div>
 
-          <div style={{ padding: "28px 32px", display: "flex", gap: "40px", alignItems: "flex-start" }}>
-            <div style={{ flex: 1 }}>
+          <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-start p-6 md:p-8">
+            <div className="flex-1 w-full">
               <div
                 style={{
                   fontFamily: "JetBrains Mono",
@@ -243,7 +243,7 @@ export default function Slide7BuildDays({ onNextSlide }: Slide7BuildDaysProps) {
             </div>
 
             {/* Step navigation buttons */}
-            <div style={{ display: "flex", gap: "8px", alignSelf: "center", flexShrink: 0, flexWrap: "wrap", justifyContent: "flex-end", maxWidth: "240px" }}>
+            <div className="flex flex-wrap gap-2 w-full md:w-auto md:max-w-[240px] justify-start md:justify-end mt-4 md:mt-0 shrink-0">
               <button
                 onClick={() => setActive(Math.max(0, active - 1))}
                 disabled={active === 0}
