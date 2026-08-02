@@ -49,10 +49,10 @@ export default function Slide1Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="animate-glow"
+          className="animate-glow mt-8 md:mt-0"
           style={{
             fontFamily: "JetBrains Mono",
-            fontSize: "clamp(32px, 12vw, 200px)",
+            fontSize: "clamp(36px, 10vw, 200px)",
             fontWeight: 700,
             color: "var(--green)",
             lineHeight: 1,
@@ -114,7 +114,7 @@ export default function Slide1Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2.2 }}
-        className="absolute bottom-8 right-10 flex items-center gap-3"
+        className="hidden md:flex absolute bottom-8 right-10 items-center gap-3"
         style={{ fontFamily: "JetBrains Mono", fontSize: "11px", color: "var(--slate)" }}
       >
         <span>scroll to initialize</span>

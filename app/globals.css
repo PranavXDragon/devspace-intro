@@ -202,8 +202,9 @@ html, body {
 
 @media (max-width: 768px) {
   .slide {
-    padding-bottom: 0;
-  }
+      padding-bottom: 0;
+      padding-top: 80px;
+    }
 
   .slide::after {
     content: '';
