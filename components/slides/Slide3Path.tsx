@@ -28,7 +28,7 @@ export default function Slide3Path() {
       tagline: "High stakes. Global impact.",
       items: [
         "Live massive codebases, day one",
-        "Google Summer of Code pathway",
+        "GDSC pathway",
         "Ecosystem grants & bug bounties",
         "Direct maintainer collaboration",
       ],
@@ -73,7 +73,7 @@ export default function Slide3Path() {
       </motion.div>
 
       {/* Cards */}
-      <div className="flex gap-6 w-full max-w-5xl">
+      <div className="flex flex-col md:flex-row gap-6 w-full max-w-5xl">
         {cards.map((card, i) => (
           <motion.div
             key={card.id}

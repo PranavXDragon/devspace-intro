@@ -197,7 +197,7 @@ export default function Slide5Pipeline() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2 }}
-        className="flex gap-6 mt-6"
+        className="flex flex-col md:flex-row gap-6 mt-6 w-full"
       >
         {[
           { label: "Track 01 // Open Sessions", sub: "Biweekly · All campus · Meta-skills", color: "var(--green)" },

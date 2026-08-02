@@ -87,7 +87,7 @@ export default function Slide4Gateway() {
         }}
       />
 
-      <div className="flex items-center gap-20 z-10 max-w-6xl w-full px-6 md:px-12">
+      <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20 z-10 max-w-6xl w-full px-6 md:px-12 py-12 md:py-0">
         {/* LEFT — Copy */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -186,9 +186,9 @@ export default function Slide4Gateway() {
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex-shrink-0"
+          className="flex-shrink-0 w-full max-w-[340px] mt-8 md:mt-0"
         >
-          <div className="terminal-window" style={{ width: "340px" }}>
+          <div className="terminal-window" style={{ width: "100%" }}>
             <div className="terminal-header">
               <div className="t-dot" style={{ background: "#ff5f56" }} />
               <div className="t-dot" style={{ background: "#ffbd2e" }} />
