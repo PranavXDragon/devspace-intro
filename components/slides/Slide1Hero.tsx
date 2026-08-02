@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Slide1Hero() {
   return (
-    <div className="slide noise grid-bg flex flex-col items-center justify-start md:justify-center relative">
+    <div className="slide noise grid-bg flex flex-col items-center justify-center relative pt-0 md:pt-0" style={{ paddingTop: 0 }}>
       {/* Deep radial gradient */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -49,7 +49,7 @@ export default function Slide1Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="animate-glow mt-8 md:mt-0"
+          className="animate-glow"
           style={{
             fontFamily: "JetBrains Mono",
             fontSize: "clamp(36px, 10vw, 200px)",
