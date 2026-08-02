@@ -30,7 +30,7 @@ export default function Slide9WhoAmI() {
 
   return (
     <div
-      className="slide noise flex flex-col md:flex-row items-center justify-center relative"
+      className="slide noise flex flex-col md:flex-row items-center justify-start md:justify-center relative"
       style={{ background: "var(--void)" }}
     >
       <div className="absolute top-6 left-8 section-num">DSC // 09</div>

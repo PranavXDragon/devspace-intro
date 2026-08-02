@@ -46,7 +46,7 @@ export default function Slide7BuildDays({ onNextSlide }: Slide7BuildDaysProps) {
 
   return (
     <div
-      className="slide noise flex flex-col items-center justify-center relative px-4 md:px-10 py-8"
+      className="slide noise flex flex-col items-center justify-start md:justify-center relative px-4 md:px-10 py-8"
       style={{ background: "var(--void)" }}
     >
       <div className="absolute top-6 left-8 section-num">DSC // 07</div>

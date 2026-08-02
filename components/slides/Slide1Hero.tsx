@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Slide1Hero() {
   return (
-    <div className="slide noise grid-bg flex flex-col items-center justify-center relative">
+    <div className="slide noise grid-bg flex flex-col items-center justify-start md:justify-center relative">
       {/* Deep radial gradient */}
       <div
         className="absolute inset-0 pointer-events-none"

@@ -30,7 +30,7 @@ export default function Slide5Pipeline() {
 
   return (
     <div
-      className="slide noise grid-bg flex flex-col items-center justify-center relative"
+      className="slide noise grid-bg flex flex-col items-center justify-start md:justify-center relative"
       style={{ background: "var(--void)" }}
     >
       <div className="absolute top-6 left-8 section-num">DSC // 05</div>
