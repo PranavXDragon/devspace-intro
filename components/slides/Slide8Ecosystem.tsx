@@ -33,8 +33,8 @@ const communities = [
   },
   {
     name: "Google Summer of Code",
-    short: "GSoC",
-    desc: "$3000–$6600 stipends for contributing to open source orgs.",
+    short: "GDSC",
+    desc: "$3000–$6600 stipends for contributing to dev space orgs.",
     color: "#EA4335",
     x: 28, y: 42, depth: 1.0,
   },
@@ -69,7 +69,7 @@ export default function Slide8Ecosystem() {
       className="slide noise relative flex items-center justify-start"
       style={{ background: "var(--void)" }}
     >
-      <div className="absolute top-6 left-8 section-num">OSC // 08</div>
+      <div className="absolute top-6 left-8 section-num">DSC // 08</div>
 
       {/* Radial background */}
       <div

@@ -49,7 +49,7 @@ function QRCode() {
 export default function Slide11Outro() {
   const [input, setInput] = useState("");
   const [lines, setLines] = useState<{ text: string; type: string }[]>([
-    { text: "Open Source Club // Q&A Terminal", type: "system" },
+    { text: "Dev space club // Q&A Terminal", type: "system" },
     { text: 'Type a question or feedback. Press Enter.', type: "hint" },
     { text: "", type: "empty" },
   ]);
@@ -59,9 +59,9 @@ export default function Slide11Outro() {
     default: "Query logged. We'll address this in the session. Thank you.",
     cohort: "Cohort selection is part of your onboarding challenge. Scan the QR.",
     git: "No prior git experience needed for Cohort 1. We start from zero.",
-    gsoc: "GSoC is a Cohort 2 target. We guide you through the application.",
+    gdsc: "GDSC is a Cohort 2 target. We guide you through the application.",
     when: "Build Days kick off in Week 2. Open Sessions start immediately.",
-    help: "Commands: 'cohort', 'git', 'gsoc', 'when', or ask anything.",
+    help: "Commands: 'cohort', 'git', 'gdsc', 'when', or ask anything.",
   };
 
   const handleSubmit = () => {
@@ -82,10 +82,10 @@ export default function Slide11Outro() {
 
   return (
     <div
-      className="slide noise flex items-center justify-center relative"
+      className="slide noise flex flex-col md:flex-row items-center justify-center relative"
       style={{ background: "var(--void)" }}
     >
-      <div className="absolute top-6 left-8 section-num">OSC // 11</div>
+      <div className="absolute top-6 left-8 section-num">DSC // 11</div>
 
       {/* Background radial */}
       <div
@@ -96,7 +96,7 @@ export default function Slide11Outro() {
         }}
       />
 
-      <div className="flex items-center gap-16 z-10 w-full max-w-6xl px-12">
+      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 z-10 w-full max-w-6xl px-6 md:px-12">
         {/* LEFT — Terminal Q&A */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -107,7 +107,7 @@ export default function Slide11Outro() {
           <div className="bento-tag mb-6">QUESTIONS & FEEDBACK</div>
           <h2
             style={{
-              fontSize: "clamp(24px, 3vw, 42px)",
+              fontSize: "clamp(20px, 3vw, 42px)",
               fontWeight: 700,
               letterSpacing: "-0.02em",
               marginBottom: "8px",
@@ -126,13 +126,13 @@ export default function Slide11Outro() {
             Type <span style={{ color: "var(--green)" }}>help</span> to see available commands.
           </p>
 
-          <div className="terminal-window" style={{ maxWidth: "520px" }}>
+          <div className="terminal-window" style={{ width: "100%", maxWidth: "520px" }}>
             <div className="terminal-header">
               <div className="t-dot" style={{ background: "#ff5f56" }} />
               <div className="t-dot" style={{ background: "#ffbd2e" }} />
               <div className="t-dot" style={{ background: "#27c93f" }} />
               <span style={{ fontSize: "11px", color: "var(--slate)", marginLeft: "8px", fontFamily: "JetBrains Mono" }}>
-                osc://qa.terminal
+                dsc://qa.terminal
               </span>
             </div>
 
@@ -248,7 +248,7 @@ export default function Slide11Outro() {
                 marginBottom: "4px",
               }}
             >
-              osc.dev/init
+              dsc.dev/init
             </div>
             <div style={{ fontSize: "12px", color: "var(--slate)", fontFamily: "JetBrains Mono" }}>
               Portal closes in 48 hours

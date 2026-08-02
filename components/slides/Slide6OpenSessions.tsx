@@ -45,7 +45,7 @@ export default function Slide6OpenSessions() {
       className="slide noise flex flex-col items-center justify-start relative px-10 pt-12 pb-8"
       style={{ background: "var(--void)" }}
     >
-      <div className="absolute top-6 left-8 section-num">OSC // 06</div>
+      <div className="absolute top-6 left-8 section-num">DSC // 06</div>
 
       {/* Badge */}
       <motion.div
@@ -79,7 +79,7 @@ export default function Slide6OpenSessions() {
         <div className="bento-tag mb-3">PHASE 01 // BIWEEKLY SESSIONS</div>
         <h2
           style={{
-            fontSize: "clamp(26px, 3.5vw, 46px)",
+            fontSize: "clamp(22px, 3.5vw, 46px)",
             fontWeight: 700,
             letterSpacing: "-0.02em",
           }}
@@ -201,7 +201,7 @@ export default function Slide6OpenSessions() {
         style={{
           marginTop: "14px",
           display: "grid",
-          gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
           gap: "10px",
           width: "100%",
           maxWidth: "980px",

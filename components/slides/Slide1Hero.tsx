@@ -14,7 +14,7 @@ export default function Slide1Hero() {
       />
 
       {/* Corner decorations */}
-      <div className="absolute top-6 left-8 section-num">OSC // 01</div>
+      <div className="absolute top-6 left-8 section-num">DSC // 01</div>
       <div
         className="absolute top-6 right-8 section-num"
         style={{ color: "var(--green)", fontFamily: "JetBrains Mono" }}
@@ -23,7 +23,7 @@ export default function Slide1Hero() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 text-center px-8 max-w-6xl mx-auto">
+      <div className="relative z-10 text-center px-4 md:px-8 max-w-6xl mx-auto">
         {/* Pre-headline */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -52,7 +52,7 @@ export default function Slide1Hero() {
           className="animate-glow"
           style={{
             fontFamily: "JetBrains Mono",
-            fontSize: "clamp(80px, 18vw, 200px)",
+            fontSize: "clamp(32px, 12vw, 200px)",
             fontWeight: 700,
             color: "var(--green)",
             lineHeight: 1,
@@ -60,7 +60,7 @@ export default function Slide1Hero() {
             marginBottom: "32px",
           }}
         >
-          $1,000,000
+          ₹1,00,00,000
         </motion.div>
 
         {/* Divider */}
@@ -88,8 +88,8 @@ export default function Slide1Hero() {
             margin: "0 auto 20px",
           }}
         >
-          What if I told you that you could make a million dollars this
-          weekend... just by reading someone else&apos;s code?
+          What if I told you that landing a ₹1 Crore package... 
+          starts with the code you write outside the classroom?
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -99,13 +99,13 @@ export default function Slide1Hero() {
             fontSize: "clamp(14px, 1.6vw, 18px)",
             color: "var(--slate)",
             lineHeight: 1.7,
-            maxWidth: "600px",
+            width: "100%", maxWidth: "600px",
             margin: "0 auto",
             fontFamily: "JetBrains Mono",
           }}
         >
-          Open source isn&apos;t charity. It is the most lucrative treasure map
-          in the world. We teach you how to read it.
+          Dev space isn&apos;t charity. It is the most lucrative treasure map 
+          to premium placements and remote jobs. We teach you how to read it.
         </motion.p>
       </div>
 

@@ -7,7 +7,7 @@ const nodes = [
   { id: "engine1", label: "Open Sessions", sub: "Biweekly // All campus", x: 52, y: 22, color: "var(--green)" },
   { id: "engine2", label: "Build Days", sub: "Weekly // Members only", x: 52, y: 78, color: "var(--blue)" },
   { id: "real", label: "Real Codebases", sub: "Live PRs", x: 74, y: 50, color: "var(--green)" },
-  { id: "outcome", label: "GSoC / Grants", sub: "Global impact", x: 92, y: 50, color: "#ffd700" },
+  { id: "outcome", label: "GDSC / Grants", sub: "Global impact", x: 92, y: 50, color: "#ffd700" },
 ];
 
 const edges = [
@@ -33,7 +33,7 @@ export default function Slide5Pipeline() {
       className="slide noise grid-bg flex flex-col items-center justify-center relative"
       style={{ background: "var(--void)" }}
     >
-      <div className="absolute top-6 left-8 section-num">OSC // 05</div>
+      <div className="absolute top-6 left-8 section-num">DSC // 05</div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}

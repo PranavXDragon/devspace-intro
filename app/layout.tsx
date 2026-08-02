@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Open Source Club — Initialize Your Proof of Work",
+  title: "Dev space club — Initialize Your Proof of Work",
   description: "The most lucrative treasure map in the industry. We teach engineers how to read it.",
 };
 

@@ -5,45 +5,45 @@ import { useState } from "react";
 const team = [
   {
     role: "President",
-    name: "Abhinav Jha",
+    name: "Name 1",
     color: "var(--green)",
     tags: ["Vision & Direction", "Decisions & Meetings", "Sponsors & Stakeholders"],
-    bio: "Abhinav sets the vision and overall direction of the club and represents it to faculty, management, and external competitions. He leads major decisions, meetings, events, and partnerships, including coordination with sponsors and stakeholders.",
+    bio: "Name 1 sets the vision and overall direction of the club and represents it to faculty, management, and external competitions. He leads major decisions, meetings, events, and partnerships, including coordination with sponsors and stakeholders.",
   },
   {
     role: "Vice President",
-    name: "Rushabh Mistry",
+    name: "Name 2",
     color: "var(--blue)",
     tags: ["Daily Operations", "Budget & Expenses", "Approvals & Transparency"],
-    bio: "Rushabh manages day-to-day operations to keep activities smooth and on schedule. He manages the club budget and expenses for NPS and outcomes, handles approvals and fund tracking, and coordinates with sponsors or the college when required.",
+    bio: "Name 2 manages day-to-day operations to keep activities smooth and on schedule. He manages the club budget and expenses for NPS and outcomes, handles approvals and fund tracking, and coordinates with sponsors or the college when required.",
   },
   {
     role: "Training Head",
-    name: "Mehul Agarwal",
+    name: "Name 3",
     color: "#a78bfa",
     tags: ["Skill Roadmaps", "Weekly Sessions", "Progress Tracking"],
-    bio: "Mehul defines skill development plans with clear roadmaps for beginner, intermediate, and advanced members. He plans and runs weekly sessions and peer-learning while tracking member progress and improvement.",
+    bio: "Name 3 defines skill development plans with clear roadmaps for beginner, intermediate, and advanced members. He plans and runs weekly sessions and peer-learning while tracking member progress and improvement.",
   },
   {
     role: "Mentorship Program & Events Head",
-    name: "Prateek Singh",
+    name: "Name 4",
     color: "#9945FF",
     tags: ["Mentorship Outcomes", "Event Execution", "Logistics & Timelines"],
-    bio: "Prateek plans and monitors the mentorship program end-to-end for measurable outcomes. He plans and executes hackathons, contests, and guest sessions from start to finish while managing logistics and participant experience.",
+    bio: "Name 4 plans and monitors the mentorship program end-to-end for measurable outcomes. He plans and executes hackathons, contests, and guest sessions from start to finish while managing logistics and participant experience.",
   },
   {
     role: "Repo Maintainer",
-    name: "Anant Singh",
+    name: "Name 5",
     color: "#f59e0b",
     tags: ["Repo Structure", "Contribution Reviews", "Issues / PRs / Releases"],
-    bio: "Anant manages and maintains the club's open-source repositories with clean structure, documentation, and code quality. He reviews contributions, guides contributors, and ensures issues, pull requests, and releases are handled smoothly.",
+    bio: "Name 5 manages and maintains the club's open-source repositories with clean structure, documentation, and code quality. He reviews contributions, guides contributors, and ensures issues, pull requests, and releases are handled smoothly.",
   },
   {
     role: "Tech and Operations Lead",
-    name: "Kunal Kumar",
+    name: "Name 6",
     color: "#ef4444",
     tags: ["Content & Operations", "External Collaborations", "Club Coordination"],
-    bio: "Kunal handles tech content and operations, and drives collaborations with outside clubs and organizations to support the club's execution and growth.",
+    bio: "Name 6 handles tech content and operations, and drives collaborations with outside clubs and organizations to support the club's execution and growth.",
   },
 ];
 
@@ -52,10 +52,10 @@ export default function Slide10Team() {
 
   return (
     <div
-      className="slide noise flex flex-col items-center justify-center relative px-10 py-8"
+      className="slide noise flex flex-col items-center justify-center relative px-4 md:px-10 py-8"
       style={{ background: "var(--void)" }}
     >
-      <div className="absolute top-6 left-8 section-num">OSC // 10</div>
+      <div className="absolute top-6 left-8 section-num">DSC // 10</div>
 
       {/* Header */}
       <motion.div
@@ -67,12 +67,12 @@ export default function Slide10Team() {
         <div className="bento-tag mb-3">THE CORE TEAM</div>
         <h2
           style={{
-            fontSize: "clamp(26px, 3.5vw, 48px)",
+            fontSize: "clamp(22px, 3.5vw, 48px)",
             fontWeight: 700,
             letterSpacing: "-0.02em",
           }}
         >
-          The Team Behind OSC.
+          The Team Behind DSC.
         </h2>
         <p
           style={{
@@ -90,7 +90,7 @@ export default function Slide10Team() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
           gap: "14px",
           width: "100%",
           maxWidth: "1080px",

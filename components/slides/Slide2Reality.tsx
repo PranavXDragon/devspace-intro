@@ -41,12 +41,12 @@ export default function Slide2Reality() {
   }, []);
 
   return (
-    <div className="slide noise flex relative" style={{ background: "var(--void)" }}>
-      <div className="absolute top-6 left-8 section-num">OSC // 02</div>
+    <div className="slide noise flex flex-col md:flex-row relative" style={{ background: "var(--void)" }}>
+      <div className="absolute top-6 left-8 section-num">DSC // 02</div>
 
       {/* LEFT — Tutorial Hell */}
       <div
-        className="flex-1 flex flex-col justify-center px-12 relative border-r"
+        className="flex-none md:flex-1 w-full min-h-[60vh] md:min-h-0 py-12 md:py-0 flex flex-col justify-start md:justify-center px-6 md:px-12 relative border-r"
         style={{ borderColor: "rgba(255,255,255,0.06)" }}
       >
         {/* Red tint */}
@@ -134,7 +134,7 @@ export default function Slide2Reality() {
       </div>
 
       {/* RIGHT — Contribution Graph */}
-      <div className="flex-1 flex flex-col justify-center px-12 relative">
+      <div className="flex-none md:flex-1 w-full min-h-[60vh] md:min-h-0 py-12 md:py-0 flex flex-col justify-start md:justify-center px-6 md:px-12 relative pb-24 md:pb-0">
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -166,7 +166,7 @@ export default function Slide2Reality() {
           </div>
 
           {/* Heatmap */}
-          <div className="glass-card" style={{ padding: "20px", borderRadius: "10px", display: "inline-block" }}>
+          <div className="glass-card" style={{ padding: "20px", borderRadius: "10px", display: "inline-block", maxWidth: "100%", overflowX: "auto" }}>
             <div style={{ fontSize: "11px", color: "var(--slate)", fontFamily: "JetBrains Mono", marginBottom: "12px" }}>
               2,847 contributions in the last year
             </div>
@@ -209,6 +209,7 @@ export default function Slide2Reality() {
             transition={{ delay: 0.7 }}
             style={{
               marginTop: "28px",
+              marginBottom: "60px",
               fontSize: "15px",
               color: "rgba(255,255,255,0.6)",
               lineHeight: 1.7,
@@ -223,7 +224,7 @@ export default function Slide2Reality() {
 
       {/* Center divider label */}
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
+        className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
         style={{
           background: "var(--void)",
           border: "1px solid rgba(255,255,255,0.08)",
@@ -238,6 +239,9 @@ export default function Slide2Reality() {
       >
         VS
       </div>
+
+      {/* Spacer for mobile nav dots */}
+      <div className="w-full h-24 flex-shrink-0 block md:hidden"></div>
     </div>
   );
 }

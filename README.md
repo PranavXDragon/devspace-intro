@@ -1,4 +1,4 @@
-# Open Source Club — Presentation Website
+# Dev space club — Presentation Website
 
 A premium, horizontally scrolling presentation website built with Next.js 14, Tailwind CSS, and Framer Motion.
 

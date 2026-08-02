@@ -46,10 +46,10 @@ export default function Slide7BuildDays({ onNextSlide }: Slide7BuildDaysProps) {
 
   return (
     <div
-      className="slide noise flex flex-col items-center justify-center relative px-10 py-8"
+      className="slide noise flex flex-col items-center justify-center relative px-4 md:px-10 py-8"
       style={{ background: "var(--void)" }}
     >
-      <div className="absolute top-6 left-8 section-num">OSC // 07</div>
+      <div className="absolute top-6 left-8 section-num">DSC // 07</div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -59,7 +59,7 @@ export default function Slide7BuildDays({ onNextSlide }: Slide7BuildDaysProps) {
         <div className="bento-tag mb-3">PHASE 02 // MEMBER TRACK</div>
         <h2
           style={{
-            fontSize: "clamp(26px, 3.5vw, 48px)",
+            fontSize: "clamp(22px, 3.5vw, 48px)",
             fontWeight: 700,
             letterSpacing: "-0.02em",
           }}
@@ -235,7 +235,7 @@ export default function Slide7BuildDays({ onNextSlide }: Slide7BuildDaysProps) {
                   fontSize: "15px",
                   color: "rgba(255,255,255,0.65)",
                   lineHeight: 1.7,
-                  maxWidth: "520px",
+                  width: "100%", maxWidth: "520px",
                 }}
               >
                 {steps[active].body}
@@ -312,7 +312,7 @@ export default function Slide7BuildDays({ onNextSlide }: Slide7BuildDaysProps) {
       >
         Both cohorts converge here.{" "}
         <span style={{ color: "var(--green)" }}>
-          Real commits. Real PRs. Profiles hunted by GSoC and recruiters.
+          Real commits. Real PRs. Profiles hunted by GDSC and recruiters.
         </span>
       </motion.p>
     </div>

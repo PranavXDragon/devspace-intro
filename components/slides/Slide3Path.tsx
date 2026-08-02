@@ -39,8 +39,8 @@ export default function Slide3Path() {
   ];
 
   return (
-    <div className="slide noise grid-bg flex flex-col items-center justify-center relative px-8" style={{ background: "var(--void)" }}>
-      <div className="absolute top-6 left-8 section-num">OSC // 03</div>
+    <div className="slide noise grid-bg flex flex-col items-center justify-center relative px-4 md:px-8" style={{ background: "var(--void)" }}>
+      <div className="absolute top-6 left-8 section-num">DSC // 03</div>
 
       {/* Header */}
       <motion.div

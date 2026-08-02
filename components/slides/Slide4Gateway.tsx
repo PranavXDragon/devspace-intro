@@ -73,10 +73,10 @@ export default function Slide4Gateway() {
 
   return (
     <div
-      className="slide noise flex items-center justify-center relative"
+      className="slide noise flex flex-col md:flex-row items-center justify-center relative"
       style={{ background: "var(--void)" }}
     >
-      <div className="absolute top-6 left-8 section-num">OSC // 04</div>
+      <div className="absolute top-6 left-8 section-num">DSC // 04</div>
 
       {/* Radial glow */}
       <div
@@ -87,7 +87,7 @@ export default function Slide4Gateway() {
         }}
       />
 
-      <div className="flex items-center gap-20 z-10 max-w-6xl w-full px-12">
+      <div className="flex items-center gap-20 z-10 max-w-6xl w-full px-6 md:px-12">
         {/* LEFT — Copy */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -201,7 +201,7 @@ export default function Slide4Gateway() {
                   fontFamily: "JetBrains Mono",
                 }}
               >
-                osc://onboarding.portal
+                dsc://onboarding.portal
               </span>
             </div>
 
@@ -225,7 +225,7 @@ export default function Slide4Gateway() {
                   marginBottom: "4px",
                 }}
               >
-                osc.dev/init
+                dsc.dev/init
               </div>
               <div
                 style={{

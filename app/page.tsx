@@ -128,7 +128,7 @@ export default function HomePage() {
         </div>
 
         {/* Arrow nav */}
-        <div style={{ position: "fixed", right: "24px", top: "50%", transform: "translateY(-50%)", display: "flex", flexDirection: "column", gap: "8px", zIndex: 100 }}>
+        <div className="hidden md:flex" style={{ position: "fixed", right: "24px", top: "50%", transform: "translateY(-50%)", flexDirection: "column", gap: "8px", zIndex: 100 }}>
           {[{ dir: -1, label: "←" }, { dir: 1, label: "→" }].map(({ dir, label }) => {
             const disabled = dir === -1 ? current === 0 : current === SLIDES.length - 1;
             const active = !disabled && dir === 1;

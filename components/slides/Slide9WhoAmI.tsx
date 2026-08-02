@@ -7,7 +7,7 @@ const terminalLines = [
   { text: "> authenticating identity...", delay: 0.4, color: "var(--slate)" },
   { text: "> credentials verified ✓", delay: 1.0, color: "var(--green)" },
   { text: "", delay: 1.4, color: "transparent" },
-  { text: "  entity: Open Source Club", delay: 1.6, color: "#fff" },
+  { text: "  entity: Dev space club", delay: 1.6, color: "#fff" },
   { text: "  mission: ship production code", delay: 2.0, color: "#fff" },
   { text: "  trust: proof_of_work only", delay: 2.4, color: "#fff" },
   { text: "", delay: 2.8, color: "transparent" },
@@ -30,10 +30,10 @@ export default function Slide9WhoAmI() {
 
   return (
     <div
-      className="slide noise flex items-center justify-center relative"
+      className="slide noise flex flex-col md:flex-row items-center justify-center relative"
       style={{ background: "var(--void)" }}
     >
-      <div className="absolute top-6 left-8 section-num">OSC // 09</div>
+      <div className="absolute top-6 left-8 section-num">DSC // 09</div>
 
       {/* Background grid */}
       <div className="absolute inset-0 grid-bg opacity-50 pointer-events-none" />
@@ -47,7 +47,7 @@ export default function Slide9WhoAmI() {
         }}
       />
 
-      <div className="flex flex-col items-center gap-10 z-10 w-full max-w-3xl px-8">
+      <div className="flex flex-col items-center gap-10 z-10 w-full max-w-3xl px-4 md:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
